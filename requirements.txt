@@ -1,0 +1,4 @@
+requests>=2.31
+python-owasp-zap-v2.4>=0.0.22
+# External (not pip): Newman -> npm install -g newman
+# External (not pip): OWASP ZAP -> docker run zaproxy/zap-stable

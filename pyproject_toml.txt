@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "api-bola-security-framework"
+version = "1.0.0"
+description = "Automated BOLA/IDOR testing with native checks, Postman/Newman and OWASP ZAP"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+keywords = ["api-security", "owasp", "bola", "idor", "zap", "postman"]
+dependencies = [
+    "requests>=2.31",
+    "python-owasp-zap-v2.4>=0.0.22",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.5"]
+
+[project.scripts]
+bola-framework = "bola_framework:main"
+
+[tool.setuptools]
+py-modules = ["bola_framework"]
+
+[tool.ruff]
+line-length = 110
